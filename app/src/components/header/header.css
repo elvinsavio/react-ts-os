@@ -25,9 +25,6 @@
 
 .user { grid-area: user; }
 
-p {
-  display: none;
-}
 
 .display-time {
   background-color: inherit;
