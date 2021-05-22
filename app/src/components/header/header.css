@@ -35,3 +35,30 @@
   align-items: center;
   cursor: pointer;
 }
+
+.calendar-style {
+  width: 280px;
+  align-self: center;
+  position: fixed;
+  top: 2.3rem;
+  border-radius: 10px;
+  background-color: #22262e ;
+  line-height: 1em;
+}
+
+.calendar-style button {
+  background-color: inherit;
+  color: white;
+  border: inherit;
+}
+
+.calendar-style__navigation button {
+  min-width: 40px;
+}
+
+.calendar-style__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
+  background-color: #191c22;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
