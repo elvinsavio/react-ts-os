@@ -1,0 +1,40 @@
+.header-container {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "activities time user";
+    background-color: #22262e;
+  }
+
+.header-container *{
+  margin: 0;
+  padding: 2px;
+
+}
+.activities { grid-area: activities; }
+
+.time {
+  grid-area: time;
+  justify-self: center;
+  
+}
+
+.user { grid-area: user; }
+
+p {
+  display: none;
+}
+
+.display-time {
+  background-color: inherit;
+  color: white;
+  border: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
