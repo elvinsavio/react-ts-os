@@ -28,6 +28,10 @@
 
 }
 
+.display-time:focus-withinJMN   +.calendar-display {
+  visibility: visible;
+}
+
 .calendar-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -48,3 +52,9 @@
   .thursday { grid-area: thursday; }
   .friday { grid-area: friday; }
   .saturday { grid-area: saturday; }
+
+  .calendar-current-date { 
+    color: orangered;
+    font-weight: bold;
+
+  }
