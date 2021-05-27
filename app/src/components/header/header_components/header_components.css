@@ -1,0 +1,50 @@
+.calendar-display {
+    margin: 2rem;
+    display: flex;
+    padding: 0.5em;
+    position: fixed;
+    font-size: 14px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 4px;
+    flex-direction: column;
+    background-color: #22262e;
+    box-shadow: 2px 2px 1px 1px #0f1114;
+}
+
+.display-time {
+  position: absolute;
+  background-color: inherit;
+  color: rgb(255, 255, 255);
+  border: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.display-time:focus + .calendar-display { 
+    visibility: visible;
+
+}
+
+.calendar-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 9px 11px;
+    grid-template-areas:
+      "sunday monday tuesday wednesday thursday friday saturday"
+      ". . . . . . ."
+      ". . . . . . ."
+      ". . . . . . ."
+      ". . . . . . ."
+      ". . . . . . .";
+  }
+  .sunday { grid-area: sunday; }
+  .monday { grid-area: monday; }
+  .tuesday { grid-area: tuesday; }
+  .wednesday { grid-area: wednesday; }
+  .thursday { grid-area: thursday; }
+  .friday { grid-area: friday; }
+  .saturday { grid-area: saturday; }

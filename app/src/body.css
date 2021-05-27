@@ -4,7 +4,7 @@ body {
   margin: 0;
   background-color: #282c34;
   color: white;
-  overflow: none;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -37,9 +37,10 @@ code {
 .footer { grid-area: footer; }
 
 
-/* remove 
+/* remove  
 .body-container * {
-  border: 2px solid red;
+  border: 1px solid black;
   position: relative;
 }
+
 */

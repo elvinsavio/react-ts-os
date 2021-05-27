@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react'
 import { BiAlarmOff, BiAlarm } from 'react-icons/bi'
-import Calendar  from 'react-calendar'
+import './header_components.css'
+
 
 const Time = () => {
   const alarm =   null //alarm set
-  const [ time, setTime ] = useState(new Date().toLocaleTimeString());
-  
-  let yes = true
-  
+  const [ time, setTime ] = useState(new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}));
   
   
   useEffect(() => {
     const timer = setInterval(() => {      
-      setTime(new Date().toLocaleTimeString("en-US"))
+      setTime(new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}))
       }, 1000);              
     return () => clearInterval(timer);
   });
@@ -22,7 +20,6 @@ const Time = () => {
         <button className='display-time'>
           { time } { alarm ? <BiAlarm /> :  <BiAlarmOff /> }
         </button>
-        <div className='calendar-container'> { yes ? <Calendar className='calendar-style' /> : null} </div>       
     </>
   )
 
