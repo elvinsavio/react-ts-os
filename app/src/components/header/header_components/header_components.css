@@ -13,6 +13,7 @@
 }
 
 .display-time {
+  text-align: center;
   position: absolute;
   background-color: inherit;
   color: rgb(255, 255, 255);
@@ -26,10 +27,6 @@
 .display-time:focus + .calendar-display { 
     visibility: visible;
 
-}
-
-.display-time:focus-withinJMN   +.calendar-display {
-  visibility: visible;
 }
 
 .calendar-container {
@@ -57,4 +54,9 @@
     color: orangered;
     font-weight: bold;
 
+  }
+
+  .bsfillcalendarfill {
+    vertical-align: bottom; 
+    font-size: 15px;
   }
