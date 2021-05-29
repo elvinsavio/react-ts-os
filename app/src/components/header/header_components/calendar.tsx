@@ -22,8 +22,6 @@ for(let i = 0; i < last_date; i++){
 }
 
 const Calendar = () => {
-
-
     return(
         <>
             <div className='calendar-display'>
