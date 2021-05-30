@@ -1,16 +1,16 @@
 .calendar-display {
     margin: 2rem;
-    display: flex;
+    display: none;
     padding: 0.5em;
     position: fixed;
     font-size: 14px;
     text-align: center;
-    visibility: hidden;
     border-radius: 4px;
     flex-direction: column;
     background-color: #22262e;
     box-shadow: 2px 2px 1px 1px #0f1114;
 }
+
 
 .display-time {
   text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .display-time:hover + .calendar-display { 
-    visibility: visible;
+    display: flex;
 
 }
 

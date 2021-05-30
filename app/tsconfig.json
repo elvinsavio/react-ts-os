@@ -21,7 +21,11 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "./src/"
+    "src"
   ],
+  "baseUrl": "src",
+  "paths": {
+    "@states/*": ["states/"]
+  }
 
 }
