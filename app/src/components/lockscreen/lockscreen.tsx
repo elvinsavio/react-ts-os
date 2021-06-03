@@ -9,11 +9,11 @@ const LockScreen = () =>{
 
     return(
 
-        <div>
-            <div className='lockscreen-background' />
-            <div className="lockscreen-time"> <Time/> </div>  
-            <div className='lockscreen-user-icon-outer' />
-            <AiOutlineUser className='lockscreen-user-icon-inner' />
+        <div className='lockscreen'>
+            <div className="lockscreen-time"> <Time/>  </div>  
+            <div className='lockscreen-user-icon-outer'>
+                <AiOutlineUser className='lockscreen-user-icon-inner' />
+            </div>
             <div className='lockscreen-sign-in'>
                      <h2>Welcome</h2>
                      <h3> Click to unlock. </h3>

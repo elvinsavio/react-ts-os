@@ -19,11 +19,12 @@ export const Body = () => {
         setscrchange(prev => !prev)
        }, 2000);
   }
-
+  
   const handledispclick = () => {
     setcaldisp(
       prev => !prev
-  )}
+  )
+  }
 
 
 
