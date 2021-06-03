@@ -1,0 +1,79 @@
+.lockscreen {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+}
+
+.lockscreen-unlocked{
+transform: translateX(101%);
+transition: transform 1s;
+background: black;
+}
+
+.lockscreen-background{
+  position: relative;
+  background-color: #2b1c33;
+  height: 100vh;
+  filter: blur(5px);
+}
+
+.lockscreen-user-icon-outer{
+  position: absolute;
+  background-color: #00000069;
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.lockscreen-user-icon-inner{
+  position: absolute;
+  color: #282c34 ;
+  width: 225px;
+  height: 225px;
+  border-radius: 250px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -80%);
+  transition: color 2s;
+}
+
+.lockscreen-user-icon-inner:hover{
+  color:rgb(255, 190, 250);
+  transition: color 2s;
+}
+
+.lockscreen-sign-in {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, 50%);
+}
+
+
+.lockscreen-time {
+position: absolute;
+z-index: 1;
+left: 50%;
+top: -10%;
+font-size: 65px;
+text-align: center;
+transform: translate(-50%, 50%);
+background: linear-gradient(to right,#3b2370, #412578, #6238B5, #412578, #3b2370);
+background-clip: text;
+color: transparent;
+font: bold;
+animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  to {
+  background-position: 15rem center;
+  }
+}
+

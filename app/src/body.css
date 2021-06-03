@@ -11,36 +11,55 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.body-container {
+.main-body {
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 2.8fr 0.1fr;
+  grid-template-rows: 0.1fr 3.5fr;
   gap: 0px 0px;
+  height: 100vh;
   grid-template-areas:
     "header"
-    "user-space"
-    "footer";
+    "main-space";
 }
 
-.header { grid-area: header; }
 
-.user-space { grid-area: user-space; }
+.main-header *{
+  padding: 2px;
+  margin: 0;
+}
+.main-header { 
+  margin: 0;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #23272e;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "activites time user";
+}
+.activites { grid-area: activites; }
 
-.footer { grid-area: footer; }
+.time { grid-area: time;}
+.user {
+  grid-area: user;
+  text-align: end;
+}
+.main-space { grid-area: main-space; }
 
-
-/* remove  
-.body-container * {
-  border: 1px solid black;
-  position: relative;
+.header-time {
+  text-align: center;
+  font-weight: bolder;
+  color: #dbdbdb73;
+  transition: color 1s;
 }
 
-*/
+.header-time:hover { 
+  color: #ffffff;
+  transition: color 0.5s;
+  cursor: default;
+}
+
