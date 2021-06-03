@@ -9,7 +9,7 @@ export const Body = () => {
 
   const [lockstate, setlockstate ] = useState(true)
   const [scrchange, setscrchange ] = useState(true)
-  const [caldisp, setcaldisp] = useState(true)
+  const [caldisp, setcaldisp] = useState(false)
   
   const handllockclick = () =>{
       setlockstate(
@@ -32,7 +32,7 @@ export const Body = () => {
     return (
 
       <>
-        { !scrchange ? 
+        { scrchange ? 
         <div className={ lockstate ? "lockscreen" : 'lockscreen-unlocked'} onClick={ handllockclick }>
           <LockScreen />
         </div>
