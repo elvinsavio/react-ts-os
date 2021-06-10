@@ -2,6 +2,7 @@ html, body, .grid-container { height: 100%; }
 
 body {
   margin: 0;
+
   background-color: #282c34;
   color: white;
   overflow: hidden;
@@ -16,6 +17,7 @@ body {
 
 .main-body {
   display: grid;
+  z-index: 0;
   grid-template-columns: 1fr;
   grid-template-rows: 0.1fr 3.5fr;
   gap: 0px 0px;
@@ -47,14 +49,21 @@ body {
 .user {
   grid-area: user;
   text-align: end;
+  margin-top: 3px;
+  vertical-align: baseline;
+  color: #dbdbdb73;
+
 }
+
+.user * { transition: color 1s;}
 .main-space { grid-area: main-space; }
 
-.header-time {
+.header-time{
   text-align: center;
   font-weight: bolder;
   color: #dbdbdb73;
   transition: color 1s;
+
 }
 
 .header-time:hover { 
@@ -63,3 +72,24 @@ body {
   cursor: default;
 }
 
+
+.user-battery:hover {
+  color: #ffffff;
+  transition: color 1s;
+}
+
+
+.user-gear:hover{
+  animation: rotating 2s linear infinite;
+  color: #ffffff;
+  transition: color 1s;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
