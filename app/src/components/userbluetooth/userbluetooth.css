@@ -1,0 +1,39 @@
+.tooglewifi{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid black;
+}
+
+.switch {    
+  padding: 0%;
+  position : relative ;   
+  display : inline-block;   
+  width : 40px;  
+  height : 20px;   
+  background-color: #404653;   
+  border-radius: 20px; 
+  transition: all 0.3s;
+}
+
+.switch::after {  
+  content: '';
+  position: absolute;
+  width: 20px;  
+  height: 20px;  
+  border-radius: 50%;  
+  background-color: #ff440093;  
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.checkbox:checked + .switch::after { 
+  left : 20px;
+  background-color: orangered;  
+}
+  
+.checkbox {   
+  visibility: hidden;
+  display: none;
+}

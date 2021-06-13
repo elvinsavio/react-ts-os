@@ -7,7 +7,7 @@ import { FaSignOutAlt, FaPowerOff } from 'react-icons/fa'
 
 
 
-const UserOption = (props:any) =>{
+const UserOption = () =>{
     const [brightnessvalue, setbrightnessValue] = useState<string | number >(0)
     const [volumevalue, setvolumeValve] = useState<string | number>(0)
 
@@ -30,6 +30,7 @@ const UserOption = (props:any) =>{
     return(
         <>
         <div className='user-option'>
+            <p>Settings</p>
             <div className='user-icons-container'>
                 <div className='user-option-1'><BsFillBrightnessHighFill/> <div className='user-value'> { brightnessvalue } </div></div>
                 <div className='user-option-2'> { volumeicons() } <div className='user-value'> { volumevalue }</div> </div>

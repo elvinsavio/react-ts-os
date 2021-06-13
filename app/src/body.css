@@ -32,6 +32,7 @@ body {
   padding: 2px;
   margin: 0;
 }
+
 .main-header { 
   margin: 0;
   grid-area: header;
@@ -52,6 +53,8 @@ body {
   margin-top: 3px;
   vertical-align: baseline;
   color: #dbdbdb73;
+  display: flex;
+  justify-content: right;
 
 }
 
@@ -63,6 +66,7 @@ body {
   font-weight: bolder;
   color: #dbdbdb73;
   transition: color 1s;
+  user-select: none;
 
 }
 
@@ -72,17 +76,13 @@ body {
   cursor: default;
 }
 
-
-.user-battery:hover {
+.user-icons:hover {
   color: #ffffff;
   transition: color 1s;
-}
-
+} 
 
 .user-gear:hover{
   animation: rotating 2s linear infinite;
-  color: #ffffff;
-  transition: color 1s;
 }
 
 @keyframes rotating {
@@ -92,4 +92,17 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.bluetoothwwrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-option{
+  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  column-gap: 2px ;
 }
