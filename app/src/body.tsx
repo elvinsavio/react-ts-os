@@ -2,9 +2,12 @@ import './body.css'
 import { useState } from 'react'
 import { BsFillGearFill } from 'react-icons/bs'
 import { GiBatteryPack } from 'react-icons/gi'
-import { MdBluetooth, MdBluetoothDisabled } from 'react-icons/md'
+import { GoBrowser } from 'react-icons/go'
+import { MdBluetooth, MdSignalWifi4Bar } from 'react-icons/md'
+import { AiOutlineChrome } from 'react-icons/ai'
 
-import BluethoothDisp from './components/userbluetooth/userbluetooth'
+
+import Usercomponent  from './components/useroption/usercomponent'
 import Time from './components/time/time'
 import DropDownCal from './components/dropdown-calendar/dropdowncal'
 import UserOption from './components/useroption/useroption'
@@ -16,10 +19,8 @@ export const Body = () => {
 
 
   const [ caldisp, setcaldisp] = useState(true)  
-  const [ gearoptiondisp, setgearoptiondisp] = useState(true)  
-
-  //bt-icon
-  const [ bluetoothicondisp, setbluetoothicondisp ] = useState(true)
+  const [ gearoptiondisp, setgearoptiondisp] = useState(true)
+  const [ wifidisp, setwifidisp] = useState(true)  
   const [ bluetoothdisp, setbluetoothdisp ] = useState(true)
 
 
@@ -38,24 +39,52 @@ export const Body = () => {
       
       
       
-      <div className="user"> 
-        <div className='bluetoothwwrapper' onClick={() => setbluetoothdisp(prev => !prev)}>
-          { bluetoothicondisp ? <MdBluetoothDisabled/> : <MdBluetooth/>  }
-        </div>
-        <GiBatteryPack className='user-icons' />
-        <BsFillGearFill className='user-icons user-gear' onClick={() => setgearoptiondisp(prev => !prev)}/>
-        
-       <div className='dropdown-option'>
-        { gearoptiondisp ? null : <UserOption /> }
-        { bluetoothdisp ? null : <BluethoothDisp/> }
-      </div>   
+        <div className="user"> 
+          <div className='bluetoothwwrapper user-icons' onClick={() => setbluetoothdisp(prev => !prev)} >
+             <MdBluetooth /> 
+          </div>
+          <div className='bluetoothwwrapper user-icons' onClick={() => setwifidisp(prev => !prev)} >
+             <MdSignalWifi4Bar /> 
+          </div>
+          <GiBatteryPack className='user-icons' />
+          <BsFillGearFill className='user-icons user-gear' onClick={() => setgearoptiondisp(prev => !prev)}/>
+          
+          <div className='dropdown-option'>
+            { wifidisp ? null : <Usercomponent name={'Wifi'} /> }
+            { bluetoothdisp ? null : <Usercomponent name={'Bluetooth'}/> }
+            { gearoptiondisp ? null : <UserOption /> }
+
+          </div>   
+          </div>
+      
+      
+      
+      
       </div>
-    </div>
 
 
 
 
-      <div className='main-space'>place-holder-text</div>
+      <div className='main-space'>
+        <div className='userspace-icons'>
+          
+          <div>
+            <button className="userspace-icons-button" onDoubleClick={() => console.log('elvin')}>
+            <AiOutlineChrome style={{fontSize:'40px'}}/>
+            <div className='userspace-icons-font'>Browser</div> 
+            </button>
+          </div>
+          
+          <div >
+            <GoBrowser style={{fontSize:'40px'}} />
+            <div className='userspace-icons-font'>Files</div> 
+          </div>
+
+        </div>  
+      </div>
+      d
+      
+      
       </div>
       
     </>

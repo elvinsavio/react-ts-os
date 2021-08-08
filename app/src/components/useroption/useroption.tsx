@@ -17,7 +17,7 @@ const UserOption = () =>{
 
 
     const volumeicons = () =>{
-        if (volumevalue == 0){
+        if (volumevalue === 0){
             return(<BsFillVolumeMuteFill/>)
         }else if(volumevalue > 0 && volumevalue < 50 ){
             return(<BsFillVolumeDownFill/>)

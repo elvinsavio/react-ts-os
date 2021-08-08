@@ -43,6 +43,7 @@ body {
   gap: 0px 0px;
   grid-template-areas:
     "activites time user";
+  z-index: 1;
 }
 .activites { grid-area: activites; }
 
@@ -56,10 +57,14 @@ body {
   display: flex;
   justify-content: right;
 
+
 }
 
-.user * { transition: color 1s;}
-.main-space { grid-area: main-space; }
+.user * { 
+  transition: color 1s;
+}
+
+  .main-space { grid-area: main-space; }
 
 .header-time{
   text-align: center;
@@ -105,4 +110,30 @@ body {
   flex-direction: column;
   position: absolute;
   column-gap: 2px ;
+  cursor: hand;
+}
+
+.userspace-icons{
+  float:left;
+  margin: 5px;
+  display:  grid;
+  grid-gap: 15px;
+ margin-left: 10px;
+}
+
+.userspace-icons * {
+  align-items: center;
+  text-align: center;
+
+}
+
+.userspace-icons-font{
+  margin-top: -2px;
+  font-size: 10px;
+}
+
+.userspace-icons-button {
+  border:none;
+  background: none;
+  color: white;
 }
